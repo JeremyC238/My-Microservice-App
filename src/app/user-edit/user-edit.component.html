@@ -1,0 +1,42 @@
+<div class="pt-2 pr-2 pl-2 pb-1">
+  <div class="pl-14 pt-4 bg-gray-400 flex">
+    <div>
+      <div>
+        <label class="text-red-600  "> Enter the New User Info</label>
+      </div>
+      <div class="py-2">
+        <label class="pr-12">Username:</label>
+        <input class="rounded-full" type="text" #username>
+      </div>
+      <div class="py-2">
+        <label class="pr-11">First Name:</label>
+        <input class="rounded-full" type="text" #firstName>
+      </div>
+      <div class="py-2">
+        <label class="pr-11">Last Name:</label>
+        <input class="rounded-full" type="text" #lastName>
+      </div>
+      <div class="py-2">
+        <label class="pr-3">Phone Number:</label>
+        <input class="rounded-full" type="text" #phoneNumber>
+      </div>
+      <div class="py-2">
+        <label class="pr-9">Phone Type:</label>
+        <input class="rounded-full" type="text" #phoneType>
+      </div>
+      <div class="flex">
+        <div class="pt-2 pb-4">
+          <button class="p-2 rounded-full bg-gray-100" (click)="edit(username.value, firstName.value,
+               lastName.value, phoneNumber.value, phoneType.value);">
+            Edit User
+          </button>
+        </div>
+        <div class="pt-2 pb-4 pl-6">
+          <button class="p-2 rounded-full bg-gray-100" (click)="goBack()">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

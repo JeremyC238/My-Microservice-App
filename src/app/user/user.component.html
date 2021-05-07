@@ -1,0 +1,110 @@
+<div class="pt-2 pr-2 pl-2 pb-1">
+
+  <div class=" pt-4 justify-around bg-gray-400 flex">
+
+    <div>
+      <div class="py-2">
+        <label class="pr-12">Username:</label>
+        <input class="rounded-full" type="text" #username>
+      </div>
+      <div class="py-2">
+        <label class="pr-11">First Name:</label>
+        <input class="rounded-full" type="text" #firstName>
+      </div>
+      <div class="py-2">
+        <label class="pr-11">Last Name:</label>
+        <input class="rounded-full" type="text" #lastName>
+      </div>
+      <div class="py-2">
+        <label class="pr-3">Phone Number:</label>
+        <input class="rounded-full" type="text" #phoneNumber>
+      </div>
+      <div class="py-2">
+        <label class="pr-9">Phone Type:</label>
+        <input class="rounded-full" type="text" #phoneType>
+      </div>
+      <div class="pt-2 pb-4">
+        <button class="p-2 rounded-full bg-gray-100" (click)="add(username.value, firstName.value,
+          lastName.value, phoneNumber.value, phoneType.value);">
+          Add User
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div class="py-2">
+        <label class="pr-12">Username:</label>
+        <input class="rounded-full" type="text" #username2>
+      </div>
+      <div class="py-2">
+        <label class="pr-3">Phone Number:</label>
+        <input class="rounded-full" type="text" #phoneNumber2>
+      </div>
+      <div class="py-2">
+        <label class="pr-9">Phone Type:</label>
+        <input class="rounded-full" type="text" #phoneType2>
+      </div>
+      <div class="pt-2 pb-4">
+        <button class="p-2 rounded-full bg-gray-100" (click)="addPhone(username2.value, phoneNumber2.value,
+          phoneType2.value)">
+          Add Phone</button>
+      </div>
+    </div>
+
+    <div class="pl-96 py-2">
+      <button class="p-2 rounded-full bg-gray-100" (click)="reset()">Reset</button>
+    </div>
+
+  </div>
+
+  <div class="flex space-x-4 justify-around text-xl py-2 bg-gray-200 text-blue-500">
+    <div>Username</div>
+    <div>First Name</div>
+    <div>Last Name</div>
+    <div>Phone Number</div>
+    <div>Phone Type</div>
+    <div>Status</div>
+    <div></div>
+    <div></div>
+  </div>
+
+</div>
+
+<div *ngFor="let User of users" class="px-2 py-1" >
+  <div class="flex justify-around text-xl py-2 bg-gray-200">
+    <div>{{User.username}}</div>
+    <div>{{User.firstName}}</div>
+    <div>{{User.lastName}}</div>
+    <div>
+      <div *ngFor="let Phone of User.phone">
+        <div>{{Phone.phoneNumber}}</div>
+      </div>
+    </div>
+    <div>
+      <div *ngFor="let Phone of User.phone">
+        <div>{{Phone.phoneType}}</div>
+      </div>
+    </div>
+    <div>
+      <div *ngFor="let Phone of User.phone">
+        <div>{{Phone.status}}</div>
+      </div>
+    </div>
+    <div>
+      <div *ngFor="let Phone of User.phone">
+        <button routerLink="/verify" class="bg-green-300 px-2 rounded-full" (click)="storeUserVerify(User, Phone.phoneNumber, Phone.phoneType, Phone.status)">verify</button>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="px-2">
+        <button routerLink="/edit" class="bg-blue-300 px-2 rounded-full" (click)="storeUser(User)">edit</button>
+      </div>
+      <div>
+        <button class="bg-red-300 px-2 rounded-full" (click)="delete(User)">remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pt-8">
+</div>

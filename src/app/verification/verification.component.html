@@ -1,0 +1,60 @@
+<div class="pt-2 pr-2 pl-2 pb-1">
+  <div class="pl-14 pt-6 pb-6 bg-gray-400 flex">
+
+    <div class="flex">
+
+      <div class="px-6">
+        <div class="text-blue-700">Username</div>
+        <p>{{username}}</p>
+      </div>
+
+      <div class="px-6">
+        <div class="text-blue-700">Phone Number</div>
+        <p>{{phoneNumber}}</p>
+      </div>
+
+      <div class="px-6">
+        <div class="text-blue-700">Phone Type</div>
+        <p>{{phoneType}}</p>
+      </div>
+
+      <div class="px-6">
+        <div class="text-blue-700">Status</div>
+        <p>{{status}}</p>
+      </div>
+
+      <div class="px-6">
+        <div class="text-blue-700">Enter Code</div>
+        <input class="rounded-full" type="text" #code>
+      </div>
+
+      <div class="px-6 pt-2">
+        <button class="p-2 rounded-full bg-gray-100" (click)="verifyCode(code.value)">
+          Verify
+        </button>
+      </div>
+
+      <div class="px-6 pt-2">
+        <button class="p-2 rounded-full bg-gray-100" (click)="sendCode()">
+          Send Code
+        </button>
+      </div>
+
+      <div class="px-6 pt-2">
+        <button class="p-2 rounded-full bg-gray-100" (click)="goBack()">
+          Back
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="pt-2 pr-2 pl-2 pb-1">
+  <div class="pl-14 pt-6 pb-6 bg-gray-400 flex justify-center">
+    <div>
+      {{numberString}}
+    </div>
+  </div>
+</div>
