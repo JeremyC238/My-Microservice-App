@@ -8,6 +8,7 @@ user.component.html
 - remove routerlink="/verify" from the verify buttion (line 95)
 - replace (click)="storeUserVerify(User, Phone.phoneNumber, Phone.phoneType, Phone.status)" with
   (click)="openDialog()" (line 95)
+  
 user.component.ts
 - add public dialog: MatDialog to the constructor (line 48)
 - uncomment this.dialog.open(DialogVerificationComponent); within the openDialog method (line 112)
