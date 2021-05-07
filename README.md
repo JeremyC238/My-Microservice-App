@@ -1,6 +1,6 @@
 # My Microservice App
 
-# Instructions for Creating Error
+# Instructions for Creating Errors
 
 1. Disconnect the current verification page
 
@@ -13,7 +13,17 @@ user.component.ts
 - add public dialog: MatDialog to the constructor (line 48)
 - uncomment this.dialog.open(DialogVerificationComponent); within the openDialog method (line 112)
 
-2. Error message displayed
+2. The first error message displayed
 - when trying to run the program in terminal the following error should be displayed
 - ERROR in /Users/crossj/node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js 1009:8-32
 "export 'ɵɵstaticViewQuery' (imported as 'ɵngcc0') was not found in '@angular/core'
+
+3. The second error message displayed
+- remove the nodes_modules
+- use npm install --legacy-peer-deps to reinstall node_modules
+- when trying to run the program in terminal the following error should be displayed
+- ERROR in The target entry-point "@angular/cdk/overlay" has missing dependencies:
+ - @angular/common
+ - @angular/core
+ - rxjs
+ - rxjs/operators
