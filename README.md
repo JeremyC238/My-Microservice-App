@@ -1,8 +1,9 @@
 # My Microservice App
 
-#Instructions for Creating Error
+# Instructions for Creating Error
 
 1. Disconnect the current verification page
+
 user.component.html
 - remove routerlink="/verify" from the verify buttion (line 95)
 - replace (click)="storeUserVerify(User, Phone.phoneNumber, Phone.phoneType, Phone.status)" with
