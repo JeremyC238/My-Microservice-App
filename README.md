@@ -1,5 +1,15 @@
 # My Microservice App
 
+This is a UI for creating and listing users. Each user has a username, first name, last name, phone number, phone type and status. Each new user created is displayed in a list with each row contatining the information for that user. The information for each user is held locally in an array.
+
+# Functionality
+
+1. can add new users
+2. can add phone to users
+3. can edit existing users
+4. can delete existing users
+5. can verify users phone numbers
+
 # Instructions for Creating Errors
 
 1. Disconnect the current verification page
