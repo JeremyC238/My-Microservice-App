@@ -4,11 +4,11 @@ This is a UI for creating and listing users. Each user has a username, first nam
 
 # Functionality
 
-1. can add new users
-2. can add phone to users
-3. can edit existing users
-4. can delete existing users
-5. can verify users phone numbers
+1. Can add new users
+2. Can add phones to users
+3. Can edit existing users
+4. Can delete existing users
+5. Can verify users phone numbers
 
 # Instructions for Creating Errors
 
