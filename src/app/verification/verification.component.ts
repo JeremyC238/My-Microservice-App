@@ -33,6 +33,22 @@ export class VerificationComponent implements OnInit {
       this.user = JSON.parse(localStorage.getItem('userToEdit'));
       this.status = 'Verified';
     }
+
+    this.users = JSON.parse(localStorage.getItem('users'));
+    console.log(this.users);
+
+    for (let i = 0; i < this.users.length; i++){
+      if (this.users[i].username === this.user.username){
+        console.log('passed');
+        for (let j = 0; j < this.users[i].phone.length; j++){
+          if (this.users[i].phone[j].phoneNumber === this.phoneNumber){
+            this.users[i].phone[j].status = this.status;
+          }
+        }
+      }
+    }
+
+    localStorage.setItem('users', JSON.stringify(this.users));
   }
 
   sendCode(): void{

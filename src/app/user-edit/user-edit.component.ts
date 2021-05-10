@@ -26,7 +26,7 @@ export class UserEditComponent implements OnInit {
       username,
       firstName,
       lastName,
-      phone: [{phoneNumber, phoneType, status: 'Not Verified'}] 
+      phone: [{phoneNumber, phoneType, status: 'Not Verified'}]
     };
 
     this.users = JSON.parse(localStorage.getItem('users'));
