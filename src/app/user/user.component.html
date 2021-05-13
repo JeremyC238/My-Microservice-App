@@ -57,54 +57,51 @@
 
   </div>
 
-  <div class="flex space-x-4 justify-around text-xl py-2 bg-gray-200 text-blue-500">
-    <div>Username</div>
-    <div>First Name</div>
-    <div>Last Name</div>
-    <div>Phone Number</div>
-    <div>Phone Type</div>
-    <div>Status</div>
-    <div></div>
-    <div></div>
-  </div>
-
 </div>
 
-<div *ngFor="let User of users" class="px-2 py-1" >
-  <div class="flex justify-around text-xl py-2 bg-gray-200">
-    <div>{{User.username}}</div>
-    <div>{{User.firstName}}</div>
-    <div>{{User.lastName}}</div>
-    <div>
-      <div *ngFor="let Phone of User.phone">
-        <div>{{Phone.phoneNumber}}</div>
-      </div>
-    </div>
-    <div>
-      <div *ngFor="let Phone of User.phone">
-        <div>{{Phone.phoneType}}</div>
-      </div>
-    </div>
-    <div>
-      <div *ngFor="let Phone of User.phone">
-        <div>{{Phone.status}}</div>
-      </div>
-    </div>
-    <div>
-      <div *ngFor="let Phone of User.phone">
-        <button routerLink="/verify" class="bg-green-300 px-2 rounded-full" (click)="storeUserVerify(User, Phone.phoneNumber, Phone.phoneType, Phone.status)">verify</button>
-      </div>
-    </div>
-    <div class="flex">
-      <div class="px-2">
-        <button routerLink="/edit" class="bg-blue-300 px-2 rounded-full" (click)="storeUser(User)">edit</button>
-      </div>
-      <div>
-        <button class="bg-red-300 px-2 rounded-full" (click)="delete(User)">remove</button>
-      </div>
+<div>
+
+  <div class="pt-1 pr-2 pl-2 pb-1">
+    <div class="text-xl py-4 bg-gray-200">
+      <table>
+        <tr class="text-blue-500">
+          <th class="px-8">Username</th>
+          <th class="px-8">First name</th>
+          <th class="px-8">Last name</th>
+          <th class="px-8">Phone Number</th>
+          <th></th>
+          <th class="px-8">Phone Type</th>
+          <th></th>
+          <th class="px-8">Status</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let User of users">
+          <td class="px-8">{{User.username}}</td>
+          <td class="px-8">{{User.firstName}}</td>
+          <td class="px-8">{{User.lastName}}</td>
+          <td class="block px-8" *ngFor="let Phone of User.phone">{{Phone.phoneNumber}}</td>
+          <td></td>
+          <td class="block px-8" *ngFor="let Phone of User.phone">{{Phone.phoneType}}</td>
+          <td></td>
+          <td class="block px-8" *ngFor="let Phone of User.phone">{{Phone.status}}</td>
+          <td></td>
+          <td class="block px-8" *ngFor="let Phone of User.phone">
+            <button routerLink="/verify" class="bg-green-300 px-2 rounded-full" (click)="storeUserVerify(User, Phone.phoneNumber, Phone.phoneType, Phone.status)">verify</button>
+          <td class="pl-8">
+            <button routerLink="/edit" class="bg-blue-300 px-2 rounded-full" (click)="storeUser(User)">edit</button>
+          </td>
+          <td>
+            <button class="bg-red-300 px-2 rounded-full" (click)="delete(User)">remove</button>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
-</div>
 
-<div class="pt-8">
+  <div class="pt-8">
+  </div>
+
 </div>
