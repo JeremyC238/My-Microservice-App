@@ -9,6 +9,7 @@ This is a UI for creating and listing users. Each user has a username, first nam
 3. Can edit existing users
 4. Can delete existing users
 5. Can verify users phone numbers
+6. Reset + refresh, resets to original state
 
 # Instructions for Creating Errors
 
